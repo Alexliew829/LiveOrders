@@ -1,6 +1,7 @@
+// next.config.js
 module.exports = {
-  output: 'standalone', // 修复Vercel输出目录问题
+  output: 'standalone',  // 关键配置：解决输出目录问题
   experimental: {
-    esmExternals: false // 强制禁用ESM警告
+    esmExternals: false  // 禁用ESM警告
   }
 }
