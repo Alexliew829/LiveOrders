@@ -3,7 +3,11 @@
   "builds": [
     {
       "src": "pages/api/*.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": { "suppressResponse": true }
     }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" }
   ]
 }
