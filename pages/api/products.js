@@ -1,4 +1,3 @@
-// pages/api/products.js
-module.exports = (req, res) => {
+export default function handler(req, res) {
   res.status(200).json({ message: "API is working!" });
 }
