@@ -1,3 +1,6 @@
 export default function handler(req, res) {
-  res.status(200).json({ message: 'products API is working!' });
+  res.status(200).json({
+    message: "Hello from /api/products!",
+    timestamp: new Date().toISOString(),
+  });
 }
