@@ -4,4 +4,15 @@ module.exports = {
   experimental: {
     esmExternals: false  // 禁用ESM警告
   }
+}module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/api/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' }
+        ]
+      }
+    ]
+  }
 }
