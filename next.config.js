@@ -1,18 +1,10 @@
 // next.config.js
-module.exports = {
-  output: 'standalone',  // 关键配置：解决输出目录问题
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'standalone',
   experimental: {
-    esmExternals: false  // 禁用ESM警告
-  }
-}module.exports = {
-  async headers() {
-    return [
-      {
-        source: '/api/:path*',
-        headers: [
-          { key: 'Access-Control-Allow-Origin', value: '*' }
-        ]
-      }
-    ]
+    esmExternals: false
   }
 }
+
+module.exports = nextConfig
